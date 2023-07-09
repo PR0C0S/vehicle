@@ -7,15 +7,15 @@
 
 
     <TextView
-        android:id="@+id/create"
+        android:id="@+id/update"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="50dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="80dp"
         android:layout_marginEnd="50dp"
         android:layout_marginBottom="25dp"
         android:gravity="center"
-        android:text="Create Account"
+        android:text="Update Account"
         android:textColor="@color/black"
         android:textSize="35dp"
         android:textStyle="bold"
@@ -26,7 +26,7 @@
         android:id="@+id/fullname"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/create"
+        android:layout_below="@id/update"
         android:layout_margin="10dp"
         android:drawableLeft="@drawable/baseline_person_24"
         android:drawablePadding="20dp"
@@ -101,44 +101,13 @@
         android:inputType="textPassword"/>
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/createbtn"
+        android:id="@+id/updatebtn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/cpassword"
         android:layout_centerHorizontal="true"
         android:layout_margin="20dp"
         android:backgroundTint="@color/design_default_color_on_secondary"
-        android:text="Create Account" />
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/createbtn"
-        android:gravity="center">
-
-
-        <TextView
-            android:id="@+id/yesAccount"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/loginbtn"
-            android:layout_centerHorizontal="true"
-            android:layout_margin="20dp"
-            android:text="Already have an account?"
-            android:textColor="@color/black"
-            android:textSize="12dp"
-            />
-
-        <com.google.android.material.button.MaterialButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/signup"
-            android:layout_below="@id/yesAccount"
-            android:text="Login"
-            android:backgroundTint="@color/design_default_color_on_secondary"
-            android:layout_centerHorizontal="true"
-            android:layout_margin="20dp"
-            />
-    </LinearLayout>
+        android:text="Update Account" />
 
 </RelativeLayout>
