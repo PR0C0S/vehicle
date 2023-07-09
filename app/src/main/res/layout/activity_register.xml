@@ -3,9 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-
-    tools:context=".Register">
+    android:layout_height="match_parent">
 
 
     <TextView
@@ -17,16 +15,15 @@
         android:layout_marginEnd="50dp"
         android:layout_marginBottom="25dp"
         android:gravity="center"
-        android:text="@string/create_account"
+        android:text="Create Account"
         android:textColor="@color/black"
-        android:textSize="35sp"
+        android:textSize="35dp"
         android:textStyle="bold"
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="59dp" />
 
     <EditText
-        android:id="@+id/fullName"
-
+        android:id="@+id/fullname"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/create"
@@ -34,15 +31,12 @@
         android:layout_marginTop="10dp"
         android:layout_marginEnd="10dp"
         android:layout_marginBottom="10dp"
-        android:autofillHints=""
         android:drawableLeft="@drawable/baseline_person_24"
         android:drawablePadding="20dp"
-        android:hint="@string/full_name"
-        android:inputType="textPersonName"
+        android:hint="Full Name"
         android:padding="20dp"
         android:textColor="@color/black"
         android:textColorHint="@color/black"
-        tools:ignore="VisualLintTextFieldSize"
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="124dp" />
 
@@ -50,12 +44,11 @@
         android:id="@+id/email"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/fullName"
+        android:layout_below="@id/fullname"
         android:layout_marginStart="10dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="10dp"
         android:layout_marginBottom="10dp"
-        android:autofillHints=""
         android:drawableLeft="@drawable/baseline_email_24"
         android:drawablePadding="20dp"
         android:ems="10"
@@ -63,8 +56,7 @@
         android:inputType="textEmailAddress"
         android:padding="20dp"
         android:textColor="@color/black"
-        android:textColorHint="@color/black"
-        tools:ignore="HardcodedText,VisualLintTextFieldSize" />
+        android:textColorHint="@color/black" />
 
     <EditText
         android:id="@+id/phone"
@@ -78,13 +70,10 @@
         android:drawableLeft="@drawable/baseline_phone_24"
         android:drawablePadding="20dp"
         android:ems="10"
-        android:hint="@string/phone_number"
-        android:inputType="phone"
+        android:hint="Phone Number"
         android:padding="20dp"
         android:textColor="@color/black"
-        android:textColorHint="@color/black"
-        tools:ignore="VisualLintTextFieldSize"
-        android:autofillHints="" />
+        android:textColorHint="@color/black" />
 
     <EditText
         android:id="@+id/username"
@@ -95,58 +84,62 @@
         android:layout_marginTop="10dp"
         android:layout_marginEnd="10dp"
         android:layout_marginBottom="10dp"
-        android:drawableLeft="@drawable/baseline_person_24"
+        android:drawableLeft="@drawable/baseline_account_circle_24"
         android:drawablePadding="20dp"
-        android:hint="Username"
-        android:inputType="textPersonName"
+        android:ems="10"
+        android:hint="User Name"
         android:padding="20dp"
         android:textColor="@color/black"
-        android:textColorHint="@color/black"
-        tools:ignore="VisualLintTextFieldSize"
-        android:autofillHints="" />
+        android:textColorHint="@color/black" />
 
     <EditText
         android:id="@+id/password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/username"
+        android:layout_margin="10dp"
+        android:hint="Password"
+        android:padding="20dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        android:drawableLeft="@drawable/baseline_security_24"
+        android:drawablePadding="20dp"
+        android:inputType="textPassword"/>
+
+    <EditText
+        android:id="@+id/cpassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/password"
         android:layout_marginStart="10dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="10dp"
         android:layout_marginBottom="10dp"
-        android:drawableLeft="@drawable/baseline_security_24"
+        android:drawableLeft="@drawable/baseline_check_24"
         android:drawablePadding="20dp"
-        android:hint="Password"
+        android:hint="Confirm Password"
         android:inputType="textPassword"
-        android:minHeight="48dp"
-        tools:ignore="VisualLintTextFieldSize"
+        android:padding="20dp"
         android:textColor="@color/black"
-        android:textColorHint="@color/black"
-        android:padding="20dp"/>
-
-
-
-
+        android:textColorHint="@color/black" />
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/buttonRegister"
+        android:id="@+id/registerBtn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/password"
+        android:layout_below="@id/cpassword"
         android:layout_centerHorizontal="true"
         android:layout_marginStart="20dp"
-
         android:layout_marginTop="20dp"
         android:layout_marginEnd="20dp"
         android:layout_marginBottom="20dp"
         android:backgroundTint="@color/design_default_color_on_secondary"
-        android:text="Create Account"
-        tools:ignore="DuplicateSpeakableTextCheck,HardcodedText,UnusedAttribute,VisualLintButtonSize" />
+        android:text="Create Account" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/buttonRegister"
+        android:layout_below="@id/registerBtn"
         android:gravity="center">
 
 
@@ -154,23 +147,24 @@
             android:id="@+id/yesAccount"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/loginView"
+            android:layout_below="@+id/loginbtn"
+            android:layout_centerHorizontal="true"
             android:layout_margin="20dp"
             android:text="Already have an account?"
             android:textColor="@color/black"
-            android:textSize="12sp"
-            tools:ignore="TextSizeCheck" />
+            android:textSize="12dp"
+            />
 
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/loginView"
             android:layout_width="wrap_content"
-            android:layout_height="48dp"
-
+            android:layout_height="wrap_content"
+            android:id="@+id/signup"
+            android:layout_below="@id/yesAccount"
+            android:text="Login"
+            android:backgroundTint="@color/design_default_color_on_secondary"
             android:layout_centerHorizontal="true"
             android:layout_margin="20dp"
-            android:backgroundTint="@color/design_default_color_on_secondary"
-            android:text="Login"
-            tools:ignore="HardcodedText,ObsoleteLayoutParam,UnusedAttribute" />
+            />
     </LinearLayout>
 
 </RelativeLayout>
