@@ -22,12 +22,13 @@ public class Dashboard extends AppCompatActivity {
         CardView vehicleInfo= findViewById(R.id.vehicleInfo);
         CardView servicing= findViewById(R.id.servicing);
         CardView profile= findViewById(R.id.profile);
+        CardView notification= findViewById(R.id.noti);
 //        CardView vehicleInfo= findViewById(R.id.vehicleInfo);
 
         vehicleInfo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(getApplicationContext(),vehicleInfo.class));
+                startActivity(new Intent(getApplicationContext(),vehicle.class));
             }
         });
 
@@ -45,6 +46,13 @@ public class Dashboard extends AppCompatActivity {
                 startActivity(new Intent(getApplicationContext(),profile.class));
             }
         });
+        notification.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(),Notification.class));
+            }
+        });
+
     }
 
 

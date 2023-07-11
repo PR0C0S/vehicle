@@ -10,7 +10,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 public class Register extends AppCompatActivity {
-    EditText fullname,username,email,phone, password;
+    EditText name,username,email,phone, password;
     Button buttonLogin,buttonRegister;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,7 +19,7 @@ public class Register extends AppCompatActivity {
         buttonRegister=findViewById(R.id.buttonRegister);
         buttonLogin=findViewById(R.id.loginView);
 
-        fullname=findViewById(R.id.fullName);
+        name=findViewById(R.id.fullName);
         username=findViewById(R.id.username);
         phone=findViewById(R.id.phone);
         email=findViewById(R.id.email);
@@ -30,7 +30,7 @@ public class Register extends AppCompatActivity {
 
 
                 Toast.makeText(Register.this, "Registered Successfully", Toast.LENGTH_SHORT).show();
-                startActivity(new Intent(getApplicationContext(),MainActivity.class));
+                startActivity(new Intent(getApplicationContext(),Login.class));
             }
         });
 

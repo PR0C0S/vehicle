@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".vehicle">
+    tools:context=".addVehicle">
 
     <TextView
         android:id="@+id/textView26"
@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
         android:shadowColor="#000000"
-        android:text="ADD CAR WASH TYPE"
+        android:text="ADD Vehicle"
         android:textColor="#000000"
         android:textSize="18sp"
         android:textStyle="bold"
@@ -21,7 +21,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/edt_typeName"
+        android:id="@+id/vehicleName"
         android:layout_width="180dp"
         android:layout_height="39dp"
         android:layout_marginTop="16dp"
@@ -39,7 +39,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="24dp"
-        android:text="Type Name"
+        android:text="Vehicle Name"
         android:textColor="#000000"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
@@ -105,12 +105,12 @@
         app:layout_constraintTop_toBottomOf="@+id/edt_typeName" />
 
     <Button
-        android:id="@+id/btn_addTypeDB"
+        android:id="@+id/button_addVehicle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="4dp"
         android:backgroundTint="#225ebb"
-        android:text="Add Type"
+        android:text="Add Vehicle"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

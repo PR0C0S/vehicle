@@ -14,4 +14,6 @@
     <string name="confirm_password">Confirm Password</string>
     <string name="password">Password</string>
     <string name="phone_number">Phone Number</string>
+    <string name="enter_the_email">Enter The Email</string>
+    <string name="productname">ProductName</string>
 </resources>
