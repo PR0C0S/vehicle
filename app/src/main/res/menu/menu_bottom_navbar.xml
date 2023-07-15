@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/app_bar_home"
+        android:icon="@drawable/baseline_home_24"
+        android:title="My Home"
+        app:showAsAction="always"/>
+
+    <item
+        android:id="@+id/app_bar_wallet"
+        android:icon="@mipmap/sharp_account_balance_wallet_black_24"
+        android:title="@string/wallet"
+        app:showAsAction="always"/>
+
+    <item
+        android:id="@+id/app_bar_atm"
+        android:title="CASH"
+        app:showAsAction="always"/>
+
+    <item
+        android:id="@+id/app_bar_cart"
+        android:icon="@mipmap/sharp_shopping_cart_black_24"
+        android:title="@string/cart"
+        app:showAsAction="always"/>
+
+    <item
+        android:id="@+id/app_bar_more"
+        android:icon="@mipmap/sharp_menu_black_24"
+        android:title="@string/more"
+        app:showAsAction="always"/>
+</menu>
