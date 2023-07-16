@@ -3,136 +3,162 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:context=".UserProfileActivity">
 
-
-    <TextView
-        android:id="@+id/create"
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="50dp"
-        android:layout_marginEnd="50dp"
-        android:layout_marginBottom="25dp"
-        android:gravity="center"
-        android:text="Profile"
-        android:textColor="@color/black"
-        android:textSize="35sp"
-        android:textStyle="bold"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="59dp" />
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/black"
 
-    <TextView
-        android:id="@+id/fullName"
+        app:title ="MY PROFILE"
+        app:titleTextColor="@color/colorBottomBar"
+        app:titleMarginStart="40dp"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/create"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginBottom="10dp"
-        android:drawablePadding="20dp"
-        android:hint="Full Name"
-        android:padding="20dp"
-        android:textColor="@color/black"
-        android:textColorHint="@color/black"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="124dp"
-        app:drawableLeftCompat="@drawable/baseline_person_24" />
-
-    <TextView
-        android:id="@+id/email"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/fullName"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginBottom="10dp"
-        android:drawablePadding="20dp"
-        android:ems="10"
-        android:hint="Email Address"
-        android:inputType="textEmailAddress"
-        android:padding="20dp"
-        android:textColor="@color/black"
-        android:textColorHint="@color/black"
-        app:drawableLeftCompat="@drawable/baseline_email_24" />
-
-    <TextView
-        android:id="@+id/phone"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/email"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginBottom="10dp"
-        android:drawablePadding="20dp"
-        android:ems="10"
-        android:hint="Phone Number"
-        android:padding="20dp"
-        android:textColor="@color/black"
-        android:textColorHint="@color/black"
-        android:inputType="phone"
-        app:drawableLeftCompat="@drawable/baseline_phone_24" />
-
-    <TextView
-        android:id="@+id/username"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/phone"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginBottom="10dp"
-        android:drawablePadding="20dp"
-        android:ems="10"
-        android:hint="User Name"
-        android:padding="20dp"
-        android:textColor="@color/black"
-        android:textColorHint="@color/black"
-        app:drawableLeftCompat="@drawable/baseline_account_circle_24" />
-
-
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/editBtn"
-        android:layout_width="180dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/username"
-        android:layout_centerHorizontal="true"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="20dp"
-        android:backgroundTint="@color/design_default_color_on_secondary"
-        android:text="Edit" />
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/editBtn"
-        android:gravity="center">
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar">
 
 
         <TextView
-            android:id="@+id/yesAccount"
-            android:layout_width="wrap_content"
+            android:id="@+id/p_fullname"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/logout"
-            android:layout_centerHorizontal="true"
-            android:layout_margin="10dp"
-            android:textColor="@color/black"
-            android:textSize="12dp" />
+            android:drawableLeft="@drawable/baseline_person_24"
+            android:layout_marginStart="40dp"
+            android:drawablePadding="20dp"
+            android:text="Name"
+            android:textSize="20dp"
 
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/logout"
-            android:layout_width="wrap_content"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="50dp" />
+
+        <TextView
+            android:id="@+id/gender"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/yesAccount"
-            android:layout_centerHorizontal="true"
-            android:layout_margin="20dp"
-            android:backgroundTint="@color/design_default_color_on_secondary"
-            android:text="Logout" />
-    </LinearLayout>
+            android:layout_below="@id/p_fullname"
+            android:drawableLeft="@drawable/gender"
+            android:drawablePadding="20dp"
+            android:layout_marginStart="40dp"
+            android:text="Gender"
+            android:textSize="20dp"
+
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="40dp"
+            tools:layout_editor_absoluteY="110dp" />
+
+        <TextView
+            android:id="@+id/email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/gender"
+            android:drawableLeft="@drawable/baseline_email_24"
+            android:drawablePadding="20dp"
+            android:layout_marginStart="40dp"
+            android:text="Email"
+            android:textSize="20dp"
+
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="40dp"
+            tools:layout_editor_absoluteY="170dp" />
+
+        <TextView
+            android:id="@+id/dob"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/email"
+            android:drawableLeft="@drawable/baseline_cake_24"
+            android:drawablePadding="20dp"
+            android:layout_marginStart="40dp"
+            android:text="DOB"
+            android:textSize="20dp"
+
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="230dp" />
+
+        <TextView
+            android:id="@+id/phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/dob"
+            android:drawableLeft="@drawable/baseline_phone_24"
+            android:drawablePadding="20dp"
+            android:layout_marginStart="40dp"
+            android:text="Phone Number"
+            android:textSize="20dp"
+
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="40dp"
+            tools:layout_editor_absoluteY="290dp" />
+
+        <TextView
+            android:id="@+id/location"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/phone"
+            android:drawableLeft="@drawable/baseline_location_on_24"
+            android:drawablePadding="20dp"
+            android:layout_marginStart="40dp"
+            android:text="Location"
+            android:textSize="20dp"
+
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="40dp"
+            tools:layout_editor_absoluteY="350dp" />
+
+        <TextView
+            android:id="@+id/username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/location"
+            android:drawableLeft="@drawable/baseline_account_circle_24"
+            android:drawablePadding="20dp"
+            android:layout_marginStart="40dp"
+            android:text="Username"
+            android:textSize="20dp"
+
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="40dp"
+            tools:layout_editor_absoluteY="410dp" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/username"
+            android:gravity="center"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="445dp">
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_edit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="20dp"
+                android:backgroundTint="@color/colorBottomBar"
+                android:text="Edit Detail"
+                android:textColor="@color/black" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_logout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="20dp"
+                android:backgroundTint="@color/colorBottomBar"
+                android:text="Logout"
+                android:textColor="@color/black" />
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <include layout="@layout/activity_bottom_navbar" />
 
 </RelativeLayout>
