@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:context=".UserUpdateActivity">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -15,10 +16,11 @@
             <androidx.appcompat.widget.Toolbar
                 android:id="@+id/toolbar"
                 android:layout_width="match_parent"
-                android:layout_height="95dp"
-                android:background="@color/colorBottomBar"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/black"
 
                 app:title ="UPDATE PROFILE"
+                app:titleTextColor="@color/colorBottomBar"
                 app:titleMarginStart="40dp"/>
 
             <EditText
@@ -91,7 +93,8 @@
                 android:textColor="@color/black"
                 android:textColorHint="@color/black"
                 tools:layout_editor_absoluteX="0dp"
-                tools:layout_editor_absoluteY="130dp" />
+                tools:layout_editor_absoluteY="130dp"
+                android:inputType="date"/>
 
             <EditText
                 android:id="@+id/phone"
@@ -135,6 +138,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
+                android:orientation="horizontal"
                 tools:ignore="MissingConstraints"
                 tools:layout_editor_absoluteX="0dp"
                 tools:layout_editor_absoluteY="445dp">
@@ -145,9 +149,9 @@
                     android:layout_height="wrap_content"
                     android:layout_centerHorizontal="true"
                     android:layout_margin="20dp"
-                    android:backgroundTint="@color/colorBottomBar"
+                    android:backgroundTint="@color/black"
                     android:text="Update Detail"
-                    android:textColor="@color/black" />
+                    android:textColor="@color/colorBottomBar" />
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/btn_cancel"
@@ -155,9 +159,9 @@
                     android:layout_height="wrap_content"
                     android:layout_centerHorizontal="true"
                     android:layout_margin="20dp"
-                    android:backgroundTint="@color/colorBottomBar"
+                    android:backgroundTint="@color/black"
                     android:text="Cancel"
-                    android:textColor="@color/black" />
+                    android:textColor="@color/colorBottomBar" />
             </LinearLayout>
 
 
