@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".ServicesActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/bottomAppBar">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+
+            <!--top navbar-->
+            <com.google.android.material.appbar.AppBarLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fitsSystemWindows="true">
+
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:background="@color/black"
+
+                    app:title ="OUR SERVICES"
+                    app:titleTextColor="@color/colorBottomBar"
+                    app:titleMarginStart="40dp"/>
+
+            </com.google.android.material.appbar.AppBarLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        app:cardCornerRadius="10dp"
+                        app:cardElevation="3dp">
+
+                            <TextView
+                                android:id="@+id/regularMaintanence"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10dp"
+                                android:drawableLeft="@drawable/car_maintenance"
+                                android:drawablePadding="20dp"
+                                android:padding="20dp"
+                                android:textColor="@color/black"
+                                android:textColorHint="@color/black"
+                                android:text="Regular Maintenance"
+                                android:textSize="20dp"/>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        app:cardCornerRadius="10dp"
+                        app:cardElevation="3dp">
+
+                        <TextView
+                            android:id="@+id/flatTyre"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:drawableLeft="@drawable/tyre"
+                            android:drawablePadding="20dp"
+                            android:padding="20dp"
+                            android:textColor="@color/black"
+                            android:textColorHint="@color/black"
+                            android:text="Flat Tyre"
+                            android:textSize="20dp"/>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        app:cardCornerRadius="10dp"
+                        app:cardElevation="3dp">
+
+                        <TextView
+                            android:id="@+id/batteryReplacement"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:drawableLeft="@drawable/car_battery__1_"
+                            android:drawablePadding="20dp"
+                            android:padding="20dp"
+                            android:textColor="@color/black"
+                            android:textColorHint="@color/black"
+                            android:text="Battery Replacement"
+                            android:textSize="20dp"/>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        app:cardCornerRadius="10dp"
+                        app:cardElevation="3dp">
+
+                        <TextView
+                            android:id="@+id/carTransmission"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:drawableLeft="@drawable/manual_transmission"
+                            android:drawablePadding="20dp"
+                            android:padding="20dp"
+                            android:textColor="@color/black"
+                            android:textColorHint="@color/black"
+                            android:text="Car Transmission"
+                            android:textSize="20dp"/>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        app:cardCornerRadius="10dp"
+                        app:cardElevation="3dp">
+
+                        <TextView
+                            android:id="@+id/carOil"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:drawableLeft="@drawable/oil_change"
+                            android:drawablePadding="20dp"
+                            android:padding="20dp"
+                            android:textColor="@color/black"
+                            android:textColorHint="@color/black"
+                            android:text="Car Oil Change"
+                            android:textSize="20dp"/>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        app:cardCornerRadius="10dp"
+                        app:cardElevation="3dp">
+
+                        <TextView
+                            android:id="@+id/sparkPlug"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:drawableLeft="@drawable/spark_plug"
+                            android:drawablePadding="20dp"
+                            android:padding="20dp"
+                            android:textColor="@color/black"
+                            android:textColorHint="@color/black"
+                            android:text="Check Spark Plugs"
+                            android:textSize="20dp"/>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        app:cardCornerRadius="10dp"
+                        app:cardElevation="3dp">
+
+                        <TextView
+                            android:id="@+id/mirrorTinting"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:drawableLeft="@drawable/rearview_mirror"
+                            android:drawablePadding="20dp"
+                            android:padding="20dp"
+                            android:textColor="@color/black"
+                            android:textColorHint="@color/black"
+                            android:text="Mirror Tinting"
+                            android:textSize="20dp"/>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        app:cardCornerRadius="10dp"
+                        app:cardElevation="3dp">
+
+                        <TextView
+                            android:id="@+id/suspensionRepair"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:drawableLeft="@drawable/auto_suspension"
+                            android:drawablePadding="20dp"
+                            android:padding="20dp"
+                            android:textColor="@color/black"
+                            android:textColorHint="@color/black"
+                            android:text="Suspension Repair"
+                            android:textSize="20dp"/>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        app:cardCornerRadius="10dp"
+                        app:cardElevation="3dp">
+
+                        <TextView
+                            android:id="@+id/brakeInspection"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:drawableLeft="@drawable/icons8_brake_pedal_50"
+                            android:drawablePadding="20dp"
+                            android:padding="20dp"
+                            android:textColor="@color/black"
+                            android:textColorHint="@color/black"
+                            android:text="Brake Inspection"
+                            android:textSize="20dp"/>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        app:cardCornerRadius="10dp"
+                        app:cardElevation="3dp">
+
+                        <TextView
+                            android:id="@+id/acInspection"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:drawableLeft="@drawable/ac"
+                            android:drawablePadding="20dp"
+                            android:padding="20dp"
+                            android:textColor="@color/black"
+                            android:textColorHint="@color/black"
+                            android:text="Car AC Inspection"
+                            android:textSize="20dp"/>
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <include layout="@layout/activity_bottom_navbar"/>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
