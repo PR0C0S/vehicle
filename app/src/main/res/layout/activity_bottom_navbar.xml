@@ -23,30 +23,30 @@
             android:orientation="horizontal"
             android:gravity="center">
 
-
-
             <TextView
                 style="?android:attr/borderlessButtonStyle"
                 android:id="@+id/my_vehicle"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:background="@drawable/ic_ripple"
+
                 android:drawableTop="@drawable/baseline_directions_car_24"
                 android:gravity="center"
                 android:orientation="vertical"
                 android:textAllCaps="false"
-                android:text="My Vehicle"
-                android:textColor="@color/black">
-            </TextView>
+                android:text="Vehicle"
 
+                android:textColor="@color/black">
+
+            </TextView>
+<!--            android:background="@drawable/ic_ripple"-->
             <TextView
                 android:id="@+id/booking"
                 style="?android:attr/borderlessButtonStyle"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:background="@drawable/ic_ripple"
+
                 android:drawableTop="@drawable/baseline_edit_calendar_24"
                 android:gravity="center"
                 android:orientation="vertical"
@@ -56,16 +56,17 @@
 
             <TextView
                 style="?android:attr/borderlessButtonStyle"
+                android:id="@+id/home"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:background="@drawable/ic_ripple"
-                android:drawableTop="@drawable/baseline_directions_car_24"
+
+                android:drawableTop="@drawable/baseline_home_24"
                 android:gravity="center"
                 android:orientation="vertical"
                 android:textAllCaps="false"
-                android:text="My Vehicle"
-                android:visibility="invisible">
+                android:text="Home"
+                android:textColor="@color/black">
             </TextView>
 
 
@@ -75,7 +76,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:background="@drawable/ic_ripple"
+
                 android:drawableTop="@drawable/baseline_build_24"
                 android:gravity="center"
                 android:orientation="vertical"
@@ -103,13 +104,13 @@
 
     </com.google.android.material.bottomappbar.BottomAppBar>
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/home"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/baseline_home_24"
-        app:tint="@color/white"
-        app:backgroundTint="@color/black"
-        app:layout_anchor="@id/bottomAppBar" />
+<!--    <com.google.android.material.floatingactionbutton.FloatingActionButton-->
+<!--        android:id="@+id/home"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:src="@drawable/baseline_home_24"-->
+<!--        app:tint="@color/white"-->
+<!--        app:backgroundTint="@color/black"-->
+<!--        app:layout_anchor="@id/bottomAppBar" />-->
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:context=".UserUpdateActivity">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -15,10 +16,11 @@
             <androidx.appcompat.widget.Toolbar
                 android:id="@+id/toolbar"
                 android:layout_width="match_parent"
-                android:layout_height="95dp"
-                android:background="@color/colorBottomBar"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/black"
 
                 app:title ="UPDATE PROFILE"
+                app:titleTextColor="@color/colorBottomBar"
                 app:titleMarginStart="40dp"/>
 
             <EditText
@@ -27,30 +29,12 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/toolbar"
                 android:layout_marginStart="10dp"
-                android:layout_marginTop="30dp"
+                android:layout_marginTop="80dp"
                 android:layout_marginEnd="10dp"
                 android:layout_marginBottom="10dp"
                 android:drawableLeft="@drawable/baseline_person_24"
                 android:drawablePadding="20dp"
                 android:hint="Full Name"
-                android:padding="20dp"
-                android:textColor="@color/black"
-                android:textColorHint="@color/black"
-                tools:layout_editor_absoluteX="0dp"
-                tools:layout_editor_absoluteY="130dp" />
-
-            <EditText
-                android:id="@+id/gender"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/fullname"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginEnd="10dp"
-                android:layout_marginBottom="10dp"
-                android:drawableLeft="@drawable/gender"
-                android:drawablePadding="20dp"
-                android:hint="Gender"
                 android:padding="20dp"
                 android:textColor="@color/black"
                 android:textColorHint="@color/black"
@@ -76,24 +60,6 @@
                 tools:layout_editor_absoluteY="130dp" />
 
             <EditText
-                android:id="@+id/dob"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/email"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginEnd="10dp"
-                android:layout_marginBottom="10dp"
-                android:drawableLeft="@drawable/baseline_cake_24"
-                android:drawablePadding="20dp"
-                android:hint="DOB"
-                android:padding="20dp"
-                android:textColor="@color/black"
-                android:textColorHint="@color/black"
-                tools:layout_editor_absoluteX="0dp"
-                tools:layout_editor_absoluteY="130dp" />
-
-            <EditText
                 android:id="@+id/phone"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -112,17 +78,17 @@
                 tools:layout_editor_absoluteY="130dp" />
 
             <EditText
-                android:id="@+id/location"
+                android:id="@+id/username"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/phone"
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="10dp"
-                android:layout_marginBottom="10dp"
-                android:drawableLeft="@drawable/baseline_location_on_24"
+                android:layout_marginBottom="50dp"
+                android:drawableLeft="@drawable/baseline_account_circle_24"
                 android:drawablePadding="20dp"
-                android:hint="Location"
+                android:hint="Username"
                 android:padding="20dp"
                 android:textColor="@color/black"
                 android:textColorHint="@color/black"
@@ -135,6 +101,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
+                android:orientation="horizontal"
                 tools:ignore="MissingConstraints"
                 tools:layout_editor_absoluteX="0dp"
                 tools:layout_editor_absoluteY="445dp">
@@ -145,9 +112,9 @@
                     android:layout_height="wrap_content"
                     android:layout_centerHorizontal="true"
                     android:layout_margin="20dp"
-                    android:backgroundTint="@color/colorBottomBar"
+                    android:backgroundTint="@color/black"
                     android:text="Update Detail"
-                    android:textColor="@color/black" />
+                    android:textColor="@color/colorBottomBar" />
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/btn_cancel"
@@ -155,9 +122,9 @@
                     android:layout_height="wrap_content"
                     android:layout_centerHorizontal="true"
                     android:layout_margin="20dp"
-                    android:backgroundTint="@color/colorBottomBar"
+                    android:backgroundTint="@color/black"
                     android:text="Cancel"
-                    android:textColor="@color/black" />
+                    android:textColor="@color/colorBottomBar" />
             </LinearLayout>
 
 
