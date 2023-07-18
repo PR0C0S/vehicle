@@ -27,17 +27,33 @@
             android:id="@+id/p_fullname"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="100dp"
+            android:layout_marginTop="70dp"
             android:layout_marginBottom="30dp"
             android:layout_marginStart="40dp"
             android:drawableLeft="@drawable/baseline_person_24"
             android:drawablePadding="20dp"
             android:text="Name"
 
-            android:textSize="25dp"
+            android:textSize="20dp"
             app:layout_constraintBottom_toTopOf="@+id/gender"
             tools:ignore="MissingConstraints"
              />
+
+        <TextView
+            android:id="@+id/gender"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/p_fullname"
+            android:drawableLeft="@drawable/gender"
+            android:layout_marginBottom="30dp"
+            android:layout_marginStart="40dp"
+            android:drawablePadding="20dp"
+            android:text="Gender"
+            android:textSize="20dp"
+
+            app:layout_constraintBottom_toTopOf="@+id/email"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="40dp" />
 
         <TextView
             android:id="@+id/email"
@@ -49,11 +65,27 @@
             android:layout_marginBottom="30dp"
             android:layout_marginStart="40dp"
             android:text="Email"
-            android:textSize="25dp"
+            android:textSize="20dp"
 
             app:layout_constraintBottom_toTopOf="@+id/dob"
             tools:ignore="MissingConstraints"
             tools:layout_editor_absoluteX="40dp" />
+
+        <TextView
+            android:id="@+id/dob"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/email"
+            android:drawableLeft="@drawable/baseline_cake_24"
+            android:drawablePadding="20dp"
+            android:layout_marginBottom="30dp"
+            android:layout_marginStart="40dp"
+            android:text="DOB"
+            android:textSize="20dp"
+
+            app:layout_constraintBottom_toTopOf="@+id/phone"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="16dp" />
 
         <TextView
             android:id="@+id/phone"
@@ -65,7 +97,7 @@
             android:layout_marginBottom="30dp"
             android:layout_marginStart="40dp"
             android:text="Phone Number"
-            android:textSize="25dp"
+            android:textSize="20dp"
 
             app:layout_constraintBottom_toTopOf="@+id/location"
             tools:ignore="MissingConstraints"
@@ -78,10 +110,10 @@
             android:layout_below="@id/location"
             android:drawableLeft="@drawable/baseline_account_circle_24"
             android:drawablePadding="20dp"
-            android:layout_marginBottom="80dp"
+            android:layout_marginBottom="50dp"
             android:layout_marginStart="40dp"
             android:text="Username"
-            android:textSize="25dp"
+            android:textSize="20dp"
 
             tools:ignore="MissingConstraints"
             tools:layout_editor_absoluteX="40dp"
@@ -92,8 +124,9 @@
             android:id="@+id/linearLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center"
             android:orientation="horizontal"
+            android:layout_below="@id/username"
+            android:gravity="center"
             tools:ignore="MissingConstraints"
             tools:layout_editor_absoluteX="0dp"
             tools:layout_editor_absoluteY="470dp">
@@ -107,8 +140,8 @@
                 android:layout_margin="20dp"
                 android:backgroundTint="@color/black"
                 android:text="Edit Detail"
-                android:textSize="20dp"
-                android:textColor="@color/colorBottomBar" />
+                android:textColor="@color/colorBottomBar"
+                android:textSize="15dp"/>
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btn_logout"
@@ -118,8 +151,8 @@
                 android:layout_margin="20dp"
                 android:backgroundTint="@color/black"
                 android:text="Logout"
-                android:textSize="20dp"
-                android:textColor="@color/colorBottomBar" />
+                android:textColor="@color/colorBottomBar"
+                android:textSize="15dp"/>
         </LinearLayout>
     </LinearLayout>
 
