@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context=".addVehicle">
+    tools:context=".AddVehicleActivity">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -14,8 +13,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:orientation="vertical"
-            android:layout_height="wrap_content"
-            tools:ignore="ExtraText">
+            android:layout_height="match_parent">
 
             <!--top navbar-->
             <com.google.android.material.appbar.AppBarLayout
@@ -40,41 +38,42 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/toolbar"
-                android:layout_marginStart="10dp"
+                android:layout_marginStart="0dp"
                 android:layout_marginTop="30dp"
                 android:layout_marginEnd="10dp"
                 android:layout_marginBottom="10dp"
 
-
+                app:startIconDrawable="@drawable/baseline_directions_car_24"
                 android:drawablePadding="20dp"
-                android:hint="Type"
-                android:padding="20dp"
+                android:hint="Vehicle Type"
+                android:paddingLeft="20dp"
                 android:textColor="@color/black"
                 android:textColorHint="@color/black"
                 tools:layout_editor_absoluteX="0dp"
                 tools:layout_editor_absoluteY="130dp"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
 
-            <AutoCompleteTextView
-                android:id="@+id/vehicleType"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="none"
-                android:minHeight="48dp" />
+                <AutoCompleteTextView
+                    android:id="@+id/vehicleType"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="none"
+                    android:minHeight="48dp" />
             </com.google.android.material.textfield.TextInputLayout>
-
-<!--            android:drawableLeft="@drawable/icons8_licence_plate_50"-->
 
             <com.google.android.material.textfield.TextInputLayout
 
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/vehicleType"
-                android:layout_margin="10dp"
-                android:drawableLeft="@drawable/baseline_directions_car_24"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                app:startIconDrawable="@drawable/baseline_directions_car_24"
                 android:drawablePadding="20dp"
                 android:hint="Brand Name"
-                android:padding="20dp"
+                android:paddingLeft="20dp"
                 android:textColor="@color/black"
                 android:textColorHint="@color/black"
                 tools:layout_editor_absoluteX="0dp"
@@ -82,31 +81,115 @@
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
 
 
-            <AutoCompleteTextView
-                android:id="@+id/vehicleBrand"
+                <AutoCompleteTextView
+                    android:id="@+id/vehicleBrand"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="none"
+                    android:minHeight="48dp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <EditText
+                android:id="@+id/number_plate"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="none"
+                android:layout_below="@id/toolbar"
+                android:layout_margin="10dp"
+                android:drawableLeft="@drawable/icons8_licence_plate_50"
+                android:drawablePadding="20dp"
+                android:hint="Number Plate"
+                android:padding="20dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                tools:layout_editor_absoluteX="0dp"
+                tools:layout_editor_absoluteY="130dp" />
 
-
-                android:minHeight="48dp" />
-        </com.google.android.material.textfield.TextInputLayout>
 
             <EditText
                 android:id="@+id/model"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/vehicleBrand"
+                android:layout_below="@id/brand"
                 android:layout_margin="10dp"
                 android:drawableLeft="@drawable/baseline_directions_car_24"
                 android:drawablePadding="20dp"
-                android:hint="@string/model_name"
+                android:hint="Model Name"
                 android:padding="20dp"
                 android:textColor="@color/black"
                 android:textColorHint="@color/black"
                 tools:layout_editor_absoluteX="0dp"
+                tools:layout_editor_absoluteY="130dp" />
+
+<!--            <com.google.android.material.textfield.TextInputLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_margin="10dp"-->
+<!--                android:hint="Car Varient"-->
+<!--                app:hintTextColor="@color/black"-->
+<!--                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"-->
+<!--                app:startIconDrawable="@drawable/fuel"-->
+<!--                >-->
+
+<!--                <AutoCompleteTextView-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:inputType="none"/>-->
+
+<!--            </com.google.android.material.textfield.TextInputLayout>-->
+
+            <com.google.android.material.textfield.TextInputLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/vehicleType"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                app:startIconDrawable="@drawable/fuel"
+                android:drawablePadding="20dp"
+                android:hint="Varient"
+                android:paddingLeft="20dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                tools:layout_editor_absoluteX="0dp"
                 tools:layout_editor_absoluteY="130dp"
-                tools:ignore="VisualLintTextFieldSize" />
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
+
+                <AutoCompleteTextView
+                    android:id="@+id/varient"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="none"
+                    android:minHeight="48dp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/varient"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                app:startIconDrawable="@drawable/steering_wheel"
+                android:drawablePadding="20dp"
+                android:hint="Drive Mode"
+                android:paddingLeft="20dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                tools:layout_editor_absoluteX="0dp"
+                tools:layout_editor_absoluteY="130dp"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
+
+                <AutoCompleteTextView
+                    android:id="@+id/driveMode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="none"
+                    android:minHeight="48dp" />
+            </com.google.android.material.textfield.TextInputLayout>
 
             <TextView
                 android:id="@+id/userid"
@@ -114,39 +197,6 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/model"
                 android:visibility="gone" />
-            <!--            <com.google.android.material.textfield.TextInputLayout-->
-            <!--                android:layout_width="match_parent"-->
-            <!--                android:layout_height="wrap_content"-->
-            <!--                android:layout_margin="10dp"-->
-            <!--                android:hint="Car Varient"-->
-            <!--                app:hintTextColor="@color/black"-->
-            <!--                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"-->
-            <!--                app:startIconDrawable="@drawable/fuel"-->
-            <!--                >-->
-
-            <!--                <AutoCompleteTextView-->
-            <!--                    android:layout_width="match_parent"-->
-            <!--                    android:layout_height="wrap_content"-->
-            <!--                    android:inputType="none"/>-->
-
-            <!--            </com.google.android.material.textfield.TextInputLayout>-->
-
-<!--            <EditText-->
-<!--                android:id="@+id/varient"-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_below="@id/model"-->
-<!--                android:layout_margin="10dp"-->
-
-<!--                android:drawablePadding="20dp"-->
-<!--                android:hint="Varient"-->
-<!--                android:padding="20dp"-->
-<!--                android:textColor="@color/black"-->
-<!--                android:textColorHint="@color/black"-->
-<!--                tools:layout_editor_absoluteX="0dp"-->
-<!--                tools:layout_editor_absoluteY="130dp" />-->
-<!--            android:drawableLeft="@drawable/fuel"-->
-
 
 
             <LinearLayout

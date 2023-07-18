@@ -6,21 +6,27 @@
     android:layout_height="match_parent"
     tools:context=".IndividualVehicleDetailActivity">
 
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
-        android:background="@color/black"
 
-        app:title ="MY VEHICLE DETAILS"
-        app:titleTextColor="@color/colorBottomBar"
-        app:titleMarginStart="40dp"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@id/toolbar"
         android:orientation="vertical">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/black"
+
+            app:title ="MY VEHICLE DETAILS"
+            app:titleTextColor="@color/colorBottomBar"
+            app:titleMarginStart="40dp"/>
 
 
         <TextView
@@ -38,11 +44,26 @@
             tools:ignore="MissingConstraints" />
 
         <TextView
+            android:id="@+id/vehicleType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginStart="40dp"
+            android:drawableLeft="@drawable/baseline_directions_car_24"
+            android:drawablePadding="20dp"
+            android:text="Vehicle Type"
+            android:textSize="20dp"
+            app:layout_constraintBottom_toTopOf="@+id/brand"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
             android:id="@+id/brand"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/number_plate"
+            android:layout_below="@id/vehicleType"
             android:drawableLeft="@drawable/baseline_directions_car_24"
+            android:layout_marginTop="10dp"
             android:layout_marginBottom="20dp"
             android:layout_marginStart="40dp"
             android:drawablePadding="20dp"
@@ -59,6 +80,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/brand"
             android:drawableLeft="@drawable/baseline_directions_car_24"
+            android:layout_marginTop="10dp"
             android:drawablePadding="20dp"
             android:layout_marginBottom="20dp"
             android:layout_marginStart="40dp"
@@ -75,6 +97,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/model"
             android:drawableLeft="@drawable/fuel"
+            android:layout_marginTop="10dp"
             android:drawablePadding="20dp"
             android:layout_marginBottom="20dp"
             android:layout_marginStart="40dp"
@@ -91,6 +114,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/varient"
             android:drawableLeft="@drawable/baseline_phone_24"
+            android:layout_marginTop="10dp"
             android:drawablePadding="20dp"
             android:layout_marginBottom="20dp"
             android:layout_marginStart="40dp"
@@ -107,10 +131,28 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/drive_mode"
             android:drawableLeft="@drawable/baseline_calendar_month_24"
+            android:layout_marginTop="10dp"
             android:drawablePadding="20dp"
             android:layout_marginBottom="20dp"
             android:layout_marginStart="40dp"
             android:text="Last Service Date"
+
+            android:textSize="20dp"
+            app:layout_constraintBottom_toTopOf="@+id/username"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="16dp" />
+
+        <TextView
+            android:id="@+id/fuel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/drive_mode"
+            android:drawableLeft="@drawable/icons8_full_tank_50"
+            android:layout_marginTop="10dp"
+            android:drawablePadding="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginStart="40dp"
+            android:text="Fuel Filled"
 
             android:textSize="20dp"
             app:layout_constraintBottom_toTopOf="@+id/username"
@@ -151,7 +193,9 @@
                 android:textColor="@color/colorBottomBar" />
         </LinearLayout>
     </LinearLayout>
+    </ScrollView>
 
     <include layout="@layout/activity_bottom_navbar" />
+
 
 </RelativeLayout>
