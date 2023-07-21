@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:context=".BottomNavbarActivity">
 
     <com.google.android.material.bottomappbar.BottomAppBar
         android:id="@+id/bottomAppBar"
@@ -24,6 +25,7 @@
 
             <TextView
                 style="?android:attr/borderlessButtonStyle"
+                android:id="@+id/home"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -37,7 +39,7 @@
 
             <TextView
                 style="?android:attr/borderlessButtonStyle"
-                android:id="@+id/my_vehicle"
+                android:id="@+id/my_car"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -67,22 +69,22 @@
 
             <TextView
                 style="?android:attr/borderlessButtonStyle"
-                android:id="@+id/services"
+                android:id="@+id/history"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:drawable="@drawable/baseline_build_24"
-                android:drawableTop="@drawable/services"
+                android:drawableTop="@drawable/calendar"
                 android:gravity="center"
                 android:orientation="vertical"
                 android:textAllCaps="false"
-                android:text="Services"
+                android:text="History"
                 android:textColor="@color/black">
             </TextView>
 
             <TextView
                 style="?android:attr/borderlessButtonStyle"
-                android:id="@+id/my_profile"
+                android:id="@+id/profile"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"

@@ -21,7 +21,7 @@
             android:orientation="vertical">
 
             <LinearLayout
-                android:id="@+id/childLayout1"
+                android:id="@+id/layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
@@ -45,7 +45,7 @@
                     android:textSize="28dp"/>
 
                 <TextView
-                    android:id="@+id/cross"
+                    android:id="@+id/close"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textColor="@color/black"
@@ -56,13 +56,13 @@
 
 
             <RatingBar
-                android:id="@+id/ratingBarADD"
+                android:id="@+id/rating_bar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:foregroundGravity="center"
                 android:layout_gravity="center_horizontal"
                 android:numStars="5"
-                android:stepSize="0.1"
+                android:stepSize="0.5"
                 android:progressTint="#E6B500"
                 android:secondaryProgressTint="#E6B500"
                 />
@@ -78,7 +78,7 @@
                 android:orientation="horizontal">
 
                 <com.google.android.material.button.MaterialButton
-                    android:id="@+id/btn_update"
+                    android:id="@+id/btn_rate"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerHorizontal="true"

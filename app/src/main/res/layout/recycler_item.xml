@@ -3,8 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".ServiceAppointment">
+    android:layout_height="match_parent">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -18,7 +17,7 @@
                 android:id="@+id/toolbar"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
-                android:background="@color/black"
+                android:background="#050505"
                 app:title ="SERVICE APPOINTMENT"
                 app:titleTextColor="@color/colorBottomBar"
                 app:titleMarginStart="40dp"/>
@@ -69,41 +68,39 @@
                 android:layout_marginTop="0dp"
                 android:background="#5A595C" />
 
-            <com.google.android.material.textfield.TextInputLayout
+            <TextView
+                android:id="@+id/serviceType"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/number_plate"
-                android:layout_marginStart="0dp"
-                android:layout_marginTop="30dp"
+                android:layout_below="@id/toolbar"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
                 android:layout_marginEnd="10dp"
-                android:layout_marginBottom="10dp"
-
-                android:hint="Service Type"
-                android:paddingLeft="20dp"
-                android:layout_marginLeft="20dp"
+                android:text="Service Type"
+                android:textSize="20dp"
+                android:padding="20dp"
                 android:textColor="@color/black"
-                android:textColorHint="@color/black"
                 tools:layout_editor_absoluteX="0dp"
-                tools:layout_editor_absoluteY="130dp"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
+                tools:layout_editor_absoluteY="130dp" />
 
-                <AutoCompleteTextView
-                    android:id="@+id/serviceType"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:inputType="none"
-                    android:minHeight="48dp" />
-            </com.google.android.material.textfield.TextInputLayout>
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginTop="0dp"
+                android:background="#5A595C" />
+
 
             <TextView
-                android:id="@+id/service_rate"
+                android:id="@+id/date"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="15dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="10dp"
-                android:text="Rs. 1000"
-                android:textSize="18dp"
+                android:text="Appointment Date"
+                android:textSize="20dp"
                 android:padding="20dp"
                 android:textColor="@color/black" />
 
@@ -115,56 +112,57 @@
                 android:layout_marginTop="0dp"
                 android:background="#5A595C" />
 
-
-            <EditText
-                android:id="@+id/date"
+            <TextView
+                android:id="@+id/service_rate"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
+                android:layout_marginStart="15dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="10dp"
-                android:layout_marginBottom="10dp"
-                android:hint="Date for Appointment (YYYY-MM-DD)"
+                android:text="Rs. 1000"
+                android:textSize="20dp"
                 android:padding="20dp"
                 android:textColor="@color/black"
-                android:textColorHint="@color/black"
-                tools:layout_editor_absoluteX="0dp"
-                tools:layout_editor_absoluteY="130dp"
-                android:inputType="date"/>
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginTop="0dp"
+                android:background="#5A595C" />
 
 
             <LinearLayout
                 android:id="@+id/childLayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
                 android:gravity="center"
                 android:orientation="horizontal"
                 tools:ignore="MissingConstraints"
                 tools:layout_editor_absoluteX="0dp"
                 tools:layout_editor_absoluteY="445dp">
 
-                <com.google.android.material.button.MaterialButton
-                    android:id="@+id/btn_confirm"
+
+                <com.khalti.widget.KhaltiButton
+                    android:id="@+id/khalti_button"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_centerHorizontal="true"
+                    app:text="Pay Now"
+                    app:khalti_button_style="khalti"/>
+
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_margin="20dp"
                     android:backgroundTint="@color/black"
-                    android:text="Confirm"
+                    android:text="Back"
                     android:textColor="@color/colorBottomBar"
                     android:textSize="15dp"/>
-
-
-                        <com.google.android.material.button.MaterialButton
-                            android:id="@+id/btn_cancel"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_centerHorizontal="true"
-                            android:layout_margin="20dp"
-                            android:backgroundTint="@color/black"
-                            android:text="Cancel"
-                            android:textColor="@color/colorBottomBar"
-                            android:textSize="15dp"/>
             </LinearLayout>
 
         </LinearLayout>
