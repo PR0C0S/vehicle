@@ -29,7 +29,7 @@ public class UserUpdateActivity extends AppCompatActivity {
         btn_cancel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(UserUpdateActivity.this,DashboardActivity.class);
+                Intent i = new Intent(UserUpdateActivity.this,MainDashboard.class);
                 startActivity(i);
             }
         });

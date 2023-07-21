@@ -11,19 +11,23 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 public class BottomNavbarActivity extends AppCompatActivity {
+
+    TextView my_car, home,booking,history,profile ;
+
+    @SuppressLint("MissingInflatedId")
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bottom_navbar);
 
-        @SuppressLint({"MissingInflatedId", "LocalSuppress"}) TextView my_vehicle = (TextView) findViewById(R.id.my_vehicle);
-        @SuppressLint({"MissingInflatedId", "LocalSuppress"}) TextView booking = (TextView) findViewById(R.id.booking);
-        @SuppressLint({"MissingInflatedId", "LocalSuppress"}) TextView services = (TextView) findViewById(R.id.services);
-        @SuppressLint({"MissingInflatedId", "LocalSuppress"}) TextView my_profile = (TextView) findViewById(R.id.my_profile);
+        my_car = (TextView) findViewById(R.id.my_car);
+        booking = (TextView) findViewById(R.id.booking);
+        history = (TextView) findViewById(R.id.history);
+        profile = (TextView) findViewById(R.id.profile);
+        home = (TextView) findViewById(R.id.home);
 
-        @SuppressLint({"MissingInflatedId", "LocalSuppress"}) FloatingActionButton home = (FloatingActionButton) findViewById(R.id.home);
         //admin and admin
 
-        my_vehicle.setOnClickListener(new View.OnClickListener() {
+        my_car.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(BottomNavbarActivity.this,MyVehicleActivity.class);
@@ -40,7 +44,7 @@ public class BottomNavbarActivity extends AppCompatActivity {
             }
         });
 
-        services.setOnClickListener(new View.OnClickListener() {
+        history.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(BottomNavbarActivity.this,ServicesActivity.class);
@@ -48,7 +52,7 @@ public class BottomNavbarActivity extends AppCompatActivity {
             }
         });
 
-        my_profile.setOnClickListener(new View.OnClickListener() {
+        profile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(BottomNavbarActivity.this,UserProfileActivity.class);
@@ -59,7 +63,7 @@ public class BottomNavbarActivity extends AppCompatActivity {
         home.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(BottomNavbarActivity.this,DashboardActivity.class);
+                Intent i = new Intent(BottomNavbarActivity.this,MainDashboard.class);
                 startActivity(i);
             }
         });

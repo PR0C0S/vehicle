@@ -5,7 +5,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.TextView;
@@ -19,6 +18,9 @@ public class ServiceAppointment extends AppCompatActivity {
     AutoCompleteTextView serviceType;
 
     ArrayAdapter<String> adapterItem;
+
+    MaterialButton btn_confirm, btn_cancel;
+    TextView service_rate;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,6 +30,28 @@ public class ServiceAppointment extends AppCompatActivity {
         adapterItem = new ArrayAdapter<String>(this,R.layout.list_services,type);
 
         serviceType.setAdapter(adapterItem);
+
+
+        btn_cancel =(MaterialButton) findViewById(R.id.btn_cancel);
+        btn_confirm =(MaterialButton) findViewById(R.id.btn_confirm);
+
+        service_rate= (TextView) findViewById(R.id.service_rate);
+
+        btn_confirm.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(ServiceAppointment.this, KhaltiTry.class);
+                startActivity(i);
+            }
+        });
+
+        btn_cancel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(ServiceAppointment.this,VehicleBookingInfoActivity.class);
+                startActivity(i);
+            }
+        });
 
     }
 }

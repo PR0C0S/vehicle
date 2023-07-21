@@ -40,7 +40,7 @@ public class RegisterActivity extends AppCompatActivity {
         registerbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(RegisterActivity.this,DashboardActivity.class);
+                Intent i = new Intent(RegisterActivity.this,MainDashboard.class);
                 startActivity(i);
             }
         });
